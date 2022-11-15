@@ -13,13 +13,19 @@ const productos = [
     {   id: 9, nombre: "jean", imagen: "./img/pantalones/03.jpg", categoria: "Pantalones",  precio: 3000 },
 ]
 
-const Pantalones = productos.filter((producto) => producto.categoria == "Pantalones")
+
+
+const categoriaPantalones = productos.filter((producto) => producto.categoria === "Pantalones")
+const categoriaRemeras = productos.filter((producto) => producto.categoria === "Rmeras")
+const categoriaAbrigos = productos.filter((producto) => producto.categoria === "Abrigos")
+
+
 result = prompt (" Elegir una categoria \n Abrigos \n Pantalones \n Remeras")
 
 
 
 let salida = ""
-for (const  producto of Pantalones) {
+for (const  producto of categoriaAbrigos) {
     salida = salida + producto.nombre + "\n"
 }
 alert(salida)
